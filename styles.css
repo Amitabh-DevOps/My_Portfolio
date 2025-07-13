@@ -1313,7 +1313,7 @@ section {
 }
 
 .about-text {
-    text-align: center;
+    text-align: center !important;
     padding: 0 2rem;
 }
 
