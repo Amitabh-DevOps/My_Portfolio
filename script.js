@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeSkills();
     initializeNavigation();
     initializeScrollAnimations();
-    initializeContactForm();
+    // initializeContactForm(); // DISABLED - using Gmail redirect instead
     initializeTypingEffect();
     initializeThemeToggle();
     initializeParallaxEffects();
@@ -480,4 +480,94 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }, 100);
+});
+// Gmail Contact Form Implementation
+document.addEventListener('DOMContentLoaded', function() {
+    const contactFormElement = document.getElementById('contact-form');
+    
+    if (contactFormElement) {
+        contactFormElement.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Validate required fields
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Get submit button and store original text
+            const submitBtn = contactFormElement.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            // Create professional email body
+            const emailBody = `Hello Amitabh,
+
+I hope this message finds you well. I'm reaching out regarding potential collaboration opportunities.
+
+Contact Details:
+Name: ${name}
+Email: ${email}
+
+Message:
+${message}
+
+I look forward to hearing from you.
+
+Best regards,
+${name}`;
+            
+            // Create Gmail compose URL
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=amitabhdevops2024@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+            
+            // Show brief loading state
+            submitBtn.innerHTML = 'Opening Gmail...';
+            submitBtn.disabled = true;
+            
+            // Open Gmail and immediately reset everything
+            window.open(gmailUrl, '_blank');
+            
+            // Immediately reset button and form (no delay)
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            contactFormElement.reset();
+            
+            // Show success notification
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #10b981;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                z-index: 10000;
+                font-family: Inter, sans-serif;
+                font-size: 14px;
+            `;
+            notification.textContent = 'Gmail opened! Please review and send your message.';
+            document.body.appendChild(notification);
+            
+            // Remove notification after 4 seconds
+            setTimeout(() => {
+                if (notification && notification.parentNode) {
+                    notification.remove();
+                }
+            }, 4000);
+        });
+    }
 });
