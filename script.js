@@ -457,3 +457,27 @@ if ('serviceWorker' in navigator) {
         //     .catch(registrationError => console.log('SW registration failed'));
     });
 }
+// Populate main skills section when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Wait a bit for the DOM to be fully ready
+    setTimeout(() => {
+        const cloudSkillsMainContainer = document.getElementById('cloud-skills-main');
+        const devSkillsMainContainer = document.getElementById('dev-skills-main');
+
+        // Populate cloud skills in main skills section
+        if (cloudSkillsMainContainer) {
+            skillsData.cloud.forEach(skill => {
+                const skillElement = createSkillElement(skill);
+                cloudSkillsMainContainer.appendChild(skillElement);
+            });
+        }
+
+        // Populate development skills in main skills section
+        if (devSkillsMainContainer) {
+            skillsData.development.forEach(skill => {
+                const skillElement = createSkillElement(skill);
+                devSkillsMainContainer.appendChild(skillElement);
+            });
+        }
+    }, 100);
+});
