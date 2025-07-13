@@ -1433,3 +1433,510 @@ section {
     backdrop-filter: none !important;
     box-shadow: var(--shadow-md) !important;
 }
+/* Hero Section Mobile Fixes */
+@media (max-width: 1024px) {
+    /* Tablet View */
+    .hero {
+        padding: 8rem 0 6rem;
+        min-height: 90vh;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        text-align: center;
+    }
+    
+    .hero-text {
+        order: 1;
+    }
+    
+    .hero-image {
+        order: 2;
+        margin-bottom: 3rem; /* Gap between hero-image and scroll-indicator */
+    }
+    
+    .hero-description {
+        text-align: center !important;
+        max-width: 600px;
+        margin: 0 auto 2rem auto;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile View */
+    .hero {
+        padding: 7rem 0 5rem; /* More top padding to prevent text cutoff */
+        min-height: 100vh;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 3rem; /* Proper gap between hero-text and hero-image */
+        text-align: center;
+    }
+    
+    .hero-text {
+        order: 1;
+        padding-top: 1rem; /* Extra padding to ensure 👋 Hello text is fully visible */
+    }
+    
+    .hero-image {
+        order: 2;
+        margin-bottom: 4rem; /* Proper gap between hero-image and scroll-indicator */
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.125rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: center !important;
+        max-width: 500px;
+        margin: 0 auto 2rem auto;
+    }
+    
+    .hero-buttons {
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Small Mobile */
+    .hero {
+        padding: 6rem 0 4rem;
+    }
+    
+    .hero-content {
+        gap: 2.5rem;
+    }
+    
+    .hero-text {
+        padding-top: 1.5rem; /* Extra padding for small screens */
+    }
+    
+    .hero-image {
+        margin-bottom: 3rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+        max-width: 400px;
+    }
+}
+/* About Section Mobile Text Size Fix */
+@media (max-width: 768px) {
+    .about-text p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 1.25rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-text p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1rem !important;
+    }
+}
+/* Skills Section Mobile - 3x3 Grid Fix */
+@media (max-width: 768px) {
+    .skills .skills-list {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 1rem !important;
+    }
+    
+    .skills .skill-item {
+        flex: 0 0 calc(33.333% - 0.67rem) !important;
+        width: calc(33.333% - 0.67rem) !important;
+        min-height: 120px !important;
+        max-width: 100px !important;
+    }
+    
+    .skill-item img {
+        width: 32px !important;
+        height: 32px !important;
+    }
+    
+    .skill-item span {
+        font-size: 0.75rem !important;
+        text-align: center;
+        word-wrap: break-word;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills .skill-item {
+        flex: 0 0 calc(33.333% - 0.67rem) !important;
+        width: calc(33.333% - 0.67rem) !important;
+        min-height: 110px !important;
+        max-width: 90px !important;
+    }
+    
+    .skill-item img {
+        width: 28px !important;
+        height: 28px !important;
+    }
+    
+    .skill-item span {
+        font-size: 0.7rem !important;
+    }
+}
+/* Projects Section - Remove Container Padding */
+.projects .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+/* Contact Section - Reduce paragraph font size on mobile */
+@media (max-width: 768px) {
+    .contact-info p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info p {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+    }
+}
+/* All Sections - Reduce Title and Subtitle Font Sizes for Mobile */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem !important;
+        margin-bottom: 2rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.75rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .section-subtitle {
+        font-size: 0.9rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+}
+/* Comprehensive Mobile Typography - Perfect Font Sizes for All Sections */
+
+/* Hero Section Mobile Typography */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.25rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    .hero-description {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    .btn {
+        font-size: 0.95rem !important;
+        padding: 0.75rem 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.9rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem !important;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem !important;
+    }
+    
+    .btn {
+        font-size: 0.9rem !important;
+        padding: 0.7rem 1.25rem !important;
+    }
+}
+
+/* About Section Mobile Typography */
+@media (max-width: 768px) {
+    .about-text p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 1.25rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-text p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1rem !important;
+    }
+}
+
+/* Skills Section Mobile Typography */
+@media (max-width: 768px) {
+    .skills .skill-category h3 {
+        font-size: 1.25rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .skill-item span {
+        font-size: 0.75rem !important;
+        line-height: 1.3 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills .skill-category h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: 1.25rem !important;
+    }
+    
+    .skill-item span {
+        font-size: 0.7rem !important;
+        line-height: 1.2 !important;
+    }
+}
+
+/* Projects Section Mobile Typography */
+@media (max-width: 768px) {
+    .project-content h3 {
+        font-size: 1.25rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .project-content p {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .tag {
+        font-size: 0.75rem !important;
+        padding: 0.25rem 0.75rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-content h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .project-content p {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .tag {
+        font-size: 0.7rem !important;
+        padding: 0.2rem 0.6rem !important;
+    }
+}
+
+/* Contact Section Mobile Typography */
+@media (max-width: 768px) {
+    .contact-info h3 {
+        font-size: 1.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .contact-info p {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .contact-item span {
+        font-size: 0.9rem !important;
+    }
+    
+    .social-link span {
+        font-size: 0.85rem !important;
+    }
+    
+    /* Form Elements */
+    .form-group label {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        font-size: 1rem !important;
+        padding: 0.75rem 1rem !important;
+    }
+    
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        font-size: 0.9rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info h3 {
+        font-size: 1.25rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .contact-info p {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 1.25rem !important;
+    }
+    
+    .contact-item span {
+        font-size: 0.8rem !important;
+    }
+    
+    .social-link span {
+        font-size: 0.75rem !important;
+    }
+    
+    /* Form Elements */
+    .form-group label {
+        font-size: 0.85rem !important;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem !important;
+        padding: 0.7rem 0.9rem !important;
+    }
+    
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        font-size: 0.8rem !important;
+    }
+}
+
+/* Resume Section Mobile Typography (if exists) */
+@media (max-width: 768px) {
+    .resume-content h3 {
+        font-size: 1.25rem !important;
+    }
+    
+    .resume-content p {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-content h3 {
+        font-size: 1.1rem !important;
+    }
+    
+    .resume-content p {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+    }
+}
+
+/* Navigation Mobile Typography */
+@media (max-width: 768px) {
+    .nav-logo a {
+        font-size: 1.25rem !important;
+    }
+    
+    .nav-link {
+        font-size: 1rem !important;
+        padding: 0.75rem 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-logo a {
+        font-size: 1.1rem !important;
+    }
+    
+    .nav-link {
+        font-size: 0.95rem !important;
+        padding: 0.7rem 0.9rem !important;
+    }
+}
+/* Footer Mobile Typography */
+@media (max-width: 768px) {
+    .footer {
+        padding: 1.5rem 0 !important;
+    }
+    
+    .footer-content p {
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .footer-content {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 1.25rem 0 !important;
+    }
+    
+    .footer-content p {
+        font-size: 0.8rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 0.25rem !important;
+    }
+    
+    .footer-content {
+        padding: 0 0.75rem;
+    }
+}
+/* Hero Buttons Alignment Fix for Laptop/1024px */
+@media (max-width: 1024px) {
+    .hero-buttons {
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-buttons {
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 1rem !important;
+    }
+}
