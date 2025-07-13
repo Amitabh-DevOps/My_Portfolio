@@ -348,7 +348,7 @@ p {
 
 .typing-text {
     border-right: 2px solid var(--primary-color);
-    animation: typing 3s steps(20) infinite;
+    /* animation: typing 3s steps(20) infinite; - Removed to prevent double cursor */
 }
 
 .cursor {
@@ -370,7 +370,7 @@ p {
 .hero-image {
     display: flex;
     justify-content: center;
-    animation: fadeInRight 1s ease-out;
+    animation: fadeInRight 1s ease-out, float 6s ease-in-out infinite 1s;
 }
 
 .image-container {
@@ -1146,4 +1146,9 @@ section {
     .wave {
         animation: none;
     }
+}
+/* Fix for double cursor issue */
+.typing-text {
+    border-right: none !important;
+    animation: none !important;
 }
