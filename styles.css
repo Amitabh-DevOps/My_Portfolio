@@ -2267,3 +2267,95 @@ section {
     font-size: 0.75rem;
     font-weight: 500;
 }
+/* Mobile Optimization for Experience Section */
+@media (max-width: 768px) {
+    .experience {
+        padding: 3rem 0;
+    }
+    
+    .experience-timeline {
+        padding: 0.5rem 0;
+    }
+    
+    .timeline-item {
+        margin-bottom: 1.5rem;
+        padding: 0;
+    }
+    
+    .timeline-marker {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .timeline-icon {
+        transform: scale(0.7);
+    }
+    
+    .experience-card {
+        padding: 1.25rem;
+    }
+    
+    .experience-header {
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.5rem;
+    }
+    
+    .experience-header h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    .company-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+        margin-top: 0.2rem;
+    }
+    
+    .company {
+        font-size: 0.9rem;
+    }
+    
+    .duration {
+        font-size: 0.8rem;
+    }
+    
+    .achievements {
+        padding-left: 1rem;
+    }
+    
+    .achievements li {
+        font-size: 0.85rem;
+        margin-bottom: 0.4rem;
+        line-height: 1.4;
+    }
+    
+    .achievements li::before {
+        left: -1rem;
+    }
+    
+    .experience-technologies {
+        gap: 0.3rem;
+        margin-top: 0.5rem;
+    }
+    
+    .tech-tag {
+        padding: 0.15rem 0.5rem;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-card {
+        padding: 1rem;
+    }
+    
+    .achievements li {
+        font-size: 0.8rem;
+    }
+    
+    .tech-tag {
+        padding: 0.1rem 0.4rem;
+        font-size: 0.65rem;
+    }
+}
