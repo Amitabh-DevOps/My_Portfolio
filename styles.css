@@ -2597,3 +2597,18 @@ section {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
 }
+/* Fix for hamburger menu contents in dark theme */
+[data-theme="dark"] .nav-menu.active {
+    background: rgba(15, 23, 42, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    border-left: 1px solid var(--border-color) !important;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .nav-menu.active .nav-item {
+    background: transparent !important;
+}
+
+[data-theme="dark"] .nav-menu.active .nav-link {
+    color: var(--text-primary) !important;
+}
