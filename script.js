@@ -142,7 +142,7 @@ function initializeScrollAnimations() {
     }, observerOptions);
 
     // Observe different elements with different animation types
-    const fadeElements = document.querySelectorAll('.project-card, .about-text, .contact-info, .contact-form, .resume-preview');
+    const fadeElements = document.querySelectorAll('.project-card, .about-text, .contact-info, .contact-form, .resume-preview, .experience-card, .timeline-item');
     fadeElements.forEach(el => {
         el.classList.add('fade-in');
         observer.observe(el);
