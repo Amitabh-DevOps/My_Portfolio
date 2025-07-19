@@ -9,7 +9,7 @@ const skillsData = {
         { title: "Ansible", img: "https://www.vectorlogo.zone/logos/ansible/ansible-icon.svg" }
     ],
     development: [
-        { title: "Python", img: "https://www.vectorlogo.zone/logos/python/python-icon.svg" },
+        // { title: "Python", img: "https://www.vectorlogo.zone/logos/python/python-icon.svg" },
         { title: "Jenkins", img: "https://www.jenkins.io/images/logos/jenkins/jenkins.svg" },
         { title: "Git", img: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" },
         { title: "GitHub", img: "https://cdn-icons-png.flaticon.com/512/25/25231.png" },
@@ -255,41 +255,6 @@ function initializeContactForm() {
     });
 }
 
-// Dark mode functionality
-function initializeThemeToggle() {
-    const sunIcon = themeToggle.querySelector('.sun-icon');
-    const moonIcon = themeToggle.querySelector('.moon-icon');
-    
-    // Check for saved theme preference or default to light mode
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
-    
-    themeToggle.addEventListener('click', function() {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
-        
-        // Add a subtle animation to the toggle button
-        themeToggle.style.transform = 'scale(0.9)';
-        setTimeout(() => {
-            themeToggle.style.transform = 'scale(1)';
-        }, 150);
-    });
-    
-    function updateThemeIcon(theme) {
-        if (theme === 'dark') {
-            sunIcon.style.display = 'none';
-            moonIcon.style.display = 'block';
-        } else {
-            sunIcon.style.display = 'block';
-            moonIcon.style.display = 'none';
-        }
-    }
-}
 
 // Enhanced parallax effects (disabled)
 function initializeParallaxEffects() {
@@ -571,3 +536,38 @@ ${name}`;
         });
     }
 });
+// Dark mode functionality
+function initializeThemeToggle() {
+    const sunIcon = themeToggle.querySelector('.sun-icon');
+    const moonIcon = themeToggle.querySelector('.moon-icon');
+    
+    // Check for saved theme preference or default to dark mode
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+    
+    themeToggle.addEventListener('click', function() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+        
+        // Add a subtle animation to the toggle button
+        themeToggle.style.transform = 'scale(0.9)';
+        setTimeout(() => {
+            themeToggle.style.transform = 'scale(1)';
+        }, 150);
+    });
+    
+    function updateThemeIcon(theme) {
+        if (theme === 'dark') {
+            sunIcon.style.display = 'none';
+            moonIcon.style.display = 'block';
+        } else {
+            sunIcon.style.display = 'block';
+            moonIcon.style.display = 'none';
+        }
+    }
+}
