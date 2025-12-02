@@ -11,7 +11,7 @@ Amitabh_Portfolio/
 │   ├── styles.css             # Modern CSS with animations
 │   ├── script.js              # Interactive JavaScript
 │   ├── README.md              # Detailed documentation
-│   ├── Amitabh-DevOps-Resume-14-5-2025.pdf
+│   ├── Amitabh-Resume.pdf
 │   └── public/                # Images and assets
 │       ├── img5.png           # Profile image
 │       ├── Project1.jpg       # Project screenshots
@@ -22,7 +22,7 @@ Amitabh_Portfolio/
 │   ├── style.css              # Original CSS
 │   ├── script.js              # Original JavaScript
 │   └── public/                # Original images
-├── Amitabh-DevOps-Resume-14-5-2025.pdf  # Resume file
+├── Amitabh-Resume.pdf  # Resume file
 └── README.md                  # This file
 ```
 
@@ -127,7 +127,7 @@ Both portfolios can be deployed to:
 ## 📄 Resume
 
 The latest resume is available in both portfolio versions:
-- **File**: `Amitabh-DevOps-Resume-14-5-2025.pdf`
+- **File**: `Amitabh-Resume.pdf`
 - **Direct download**: Available through the resume section of both portfolios
 
 ## 🎯 Recommendations
